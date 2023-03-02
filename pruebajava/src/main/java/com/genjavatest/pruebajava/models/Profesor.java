@@ -5,16 +5,16 @@ import java.util.ArrayList;
 public class Profesor extends Persona{
     
     public String materia;
-    ArrayList<String> curso = new ArrayList<String>();
+    ArrayList<Curso> listadoCursos = new ArrayList<Curso>();
     
     public Profesor() {
         super();
     }
 
-    public Profesor(String nombre, String apellido, String materia, ArrayList<String> curso) {
+    public Profesor(String nombre, String apellido, String materia, ArrayList<Curso> listadoCursos) {
         super(nombre, apellido);
         this.materia = materia;
-        this.curso = curso;
+        this.listadoCursos = listadoCursos;
     }
 
     public String getMateria() {
@@ -25,18 +25,20 @@ public class Profesor extends Persona{
         this.materia = materia;
     }
 
-    public ArrayList<String> getCurso() {
-        return curso;
+    public ArrayList<Curso> getListadoCursos() {
+        return listadoCursos;
     }
 
-    public void setCurso(ArrayList<String> curso) {
-        this.curso = curso;
+    public void setListadoCursos(ArrayList<Curso> listadoCursos) {
+        this.listadoCursos = listadoCursos;
     }
 
     @Override
     public String toString() {
-        return super.toString() + "Profesor [materia=" + materia + ", curso=" + curso + "]";
+        return super.toString() + "Profesor [materia=" + materia + ", listadoCursos=" + listadoCursos + "]";
     }
+
+    
 
     
     
